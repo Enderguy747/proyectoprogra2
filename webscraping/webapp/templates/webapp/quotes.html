@@ -1,0 +1,37 @@
+{% extends "webapp/base.html" %}
+
+{% load static %}
+
+{% block title %} <title>Quotes</title> {% endblock %}
+
+{% block content %}
+<br>
+<div class="container">
+<div class="alert alert-primary" role="alert">
+    Estos datos fueron scrapeados de <a href="http://quotes.toscrape.com/" class="alert-link">http://quotes.toscrape.com/</a>
+  </div>
+  <a class="btn btn-primary" href="{% url 'reload' %}" role="button">Actualizar</a>
+  <p></p>
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Cita</th>
+        <th scope="col">Autor</th>
+        <th scope="col">Tags</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        {% for cita in citas  %}
+        <tr>
+            <td>{{ cita.title }}</td>
+            <td>{{ cita.author }}</td>
+            <td>{{ cita.tag }}</td>
+          </tr>
+        {% endfor %}
+        
+   
+    </tbody>
+  </table>
+
+{% endblock %}

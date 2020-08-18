@@ -1,0 +1,8 @@
+
+/webscraping/webapp/migrations/
+/webscraping/webapp/__pycache__/
+/webscraping/webscraping/__pycache__/
+/tutorial/tutorial/__pycache__/
+/tutorial/tutorial/spiders/__pycache__/
+db.sqlite3
+/virtual/
